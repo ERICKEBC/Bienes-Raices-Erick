@@ -1,0 +1,300 @@
+/* ========== RESET ========== */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: 'Fredoka', sans-serif;
+line-height: 1.6;
+color: #050404;
+background-color: #1a1a2e;
+}
+
+/* ========== HEADER ========== */
+.header {
+background: #251D82;
+color: white;
+padding: 0.8rem 2rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+position: fixed;
+top: 0;
+z-index: 1000;
+box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+display: flex;
+align-items: center;
+gap: 1rem;
+}
+
+.logo img {
+width: 90px;
+height: 90px;
+border-radius: 50%;
+object-fit: cover;
+border: 3px solid white;
+}
+
+/* ========== NAVEGACIÓN ========== */
+.nav ul {
+display: flex;
+list-style: none;
+gap: 12px;
+}
+
+.nav-button {
+background-color: #b9ddff;
+color: #1a1a2e;
+padding: 10px 22px;
+border-radius: 12px;
+text-decoration: none;
+font-weight: 600;
+font-size: 0.95rem;
+transition: all 0.3s ease;
+border: 2px solid transparent;
+}
+
+.nav-button:hover {
+background-color: #ffffff;
+transform: translateY(-2px);
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ========== HERO ========== */
+.hero {
+position: relative;
+height: 100vh;
+min-height: 700px;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+overflow: hidden;
+}
+
+/* Video de fondo */
+.video-background {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 0;
+}
+
+.video-background video {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+/* Capa oscura para legibilidad */
+.hero::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(20, 15, 60, 0.55);
+z-index: 1;
+}
+
+.hero-content {
+position: relative;
+z-index: 2;
+max-width: 900px;
+padding: 0 20px;
+}
+
+/* Título tipo pastilla */
+.hero-content h1 {
+display: inline-block;
+font-size: 3.2rem;
+font-weight: 700;
+background: rgba(185, 221, 255, 0.85);
+color: #1a1a2e;
+padding: 14px 50px;
+border-radius: 50px;
+margin-bottom: 1.2rem;
+box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content p {
+font-size: 1.35rem;
+color: #e0f7fa;
+margin-bottom: 2.5rem;
+text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+max-width: 700px;
+margin-left: auto;
+margin-right: auto;
+}
+
+/* Botones del hero */
+.hero-buttons {
+display: flex;
+justify-content: center;
+gap: 20px;
+flex-wrap: wrap;
+}
+
+.btn {
+display: inline-block;
+background: #251D82;
+color: #ffffff;
+padding: 14px 32px;
+border-radius: 14px;
+text-decoration: none;
+font-weight: 600;
+font-size: 1.05rem;
+border: 3px solid #b9ddff;
+transition: all 0.3s ease;
+}
+
+.btn:hover {
+background: #b9ddff;
+color: #251D82;
+transform: translateY(-3px);
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+.header {
+flex-direction: column;
+gap: 15px;
+padding: 1rem;
+}
+
+.nav ul {
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.hero-content h1 {
+font-size: 2.2rem;
+padding: 12px 30px;
+}
+
+.hero-content p {
+font-size: 1.1rem;
+}
+}
+  /* Estilos para todas las secciones principales */
+  main section {
+  padding: 50px 20px;
+  margin: 0 auto;
+  text-align: center;
+  }
+
+/* Sección Quiénes Somos */
+  .quienes-somos {
+  background-color: #b9ddff;
+  }
+  
+  .quienes-somos h2 {
+  margin-bottom: 20px;
+  }
+  
+  .quienes-somos .content {
+  max-width: 800px;
+  margin: 0 auto;
+  }
+
+  /* Pie de página (footer) */
+  footer {
+  background-color: #251D82;
+  color: #ffffff;
+  padding: 40px 20px 20px;
+  text-align: center;
+  font-family: 'Fredoka', sans-serif;
+  }
+  
+  .footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  text-align: left;
+  }
+  
+  @media (min-width: 768px) {
+  .footer-grid {
+  grid-template-columns: 1fr 1fr;
+  }
+  }
+  
+  .contacto-Administrador, .redes-sociales {
+  padding: 0 10px;
+  }
+  
+  .contacto-Administrador h3, .redes-sociales h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  }
+  
+  .contacto-Administrador address p {
+  margin: 5px 0;
+  }
+  
+  .contacto-Administrador a {
+  color: hwb(0 1% 0%);
+  text-decoration: none;
+  transition: color 0.3s;
+  }
+  
+  .contacto-Administrador a:hover {
+  text-decoration: underline;
+  }
+  
+  .redes-iconos a {
+  color: hsl(0, 97%, 50%);
+  margin: 0 10px;
+  font-size: 24px;
+  transition: color 0.3s;
+  }
+  
+  .redes-iconos a:hover {
+  color: hsl(310, 97%, 49%);
+  }
+  
+  .footer-bottom {
+  border-top: 1px solid #86C7D7;
+  padding-top: 20px;
+  position: relative;
+  }
+  
+  .scroll-to-top-btn {
+  background-color: #b9ddff;
+  border: none;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .scroll-to-top-btn:hover {
+  background-color: #6d8ed6;
+  transform: translateX(-50%) scale(1.1);
+  }
+  
+  .copyright {
+  font-size: 0.8rem;
+  margin: 0;
+  }
